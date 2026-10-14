@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>旅游路线规划器</title>
+</head>
+<body>
+<div id="app">
+  <aside id="side">
+    <header class="head">
+      <input id="title" class="title" placeholder="给这次旅行起个名字" maxlength="40" />
+      <div id="summary" class="summary"></div>
+      <div class="modes" id="modes"></div>
+    </header>
+    <div id="list"></div>
+    <footer class="foot">
+      <button id="bExport">导出 JSON</button>
+      <button id="bImport">导入</button>
+      <button id="bLink">分享链接</button>
+      <button id="bImg">存为图片</button>
+      <button id="bClear" class="danger">清空</button>
+    </footer>
+  </aside>
+  <main id="mapwrap">
+    <div id="map"></div>
+    <div id="search">
+      <input id="q" type="search" placeholder="搜索地点，如：外滩、故宫" autocomplete="off" />
+      <ul id="sugg" hidden></ul>
+    </div>
+    <div id="gate" hidden>
+      <div class="box">
+        <h2>填入高德 Key 开始规划</h2>
+        <p>在 <a href="https://lbs.amap.com/" target="_blank" rel="noreferrer">高德开放平台</a> 申请「Web端（JS API）」Key，把 Key 和安全密钥填在下面。它们只保存在你的浏览器里。</p>
+        <label>Key<input id="inKey" type="text" /></label>
+        <label>安全密钥 securityJsCode<input id="inSec" type="text" /></label>
+        <button id="bStart" class="primary">加载地图</button>
+      </div>
+    </div>
+  </main>
+</div>
+<div id="toast"></div>
+<input type="file" id="file" accept="application/json,.json" hidden />
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

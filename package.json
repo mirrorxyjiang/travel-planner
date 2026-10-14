@@ -1,0 +1,21 @@
+{
+  "name": "travel-planner",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "html-to-image": "^1.11.11",
+    "lz-string": "^1.5.0",
+    "sortablejs": "^1.15.2"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "description": "基于高德地图的旅游路线规划工具",
+  "license": "MIT"
+}
